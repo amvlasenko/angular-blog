@@ -35,9 +35,7 @@ export class EditComponent implements OnInit {
 
   ngOnDestroy() {
     // This is to prevent memory leaks and performance regression
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    this.subscription.unsubscribe();
   }
 
   // This method find post by id from url in posts array
