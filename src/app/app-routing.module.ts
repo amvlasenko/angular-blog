@@ -4,17 +4,16 @@ import { BlogComponent } from './blog/blog.component';
 import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
-  { path: '', component: BlogComponent},
-  { 
+  { path: '', component: BlogComponent },
+  {
     path: 'edit/:id',
-    component: EditComponent
+    component: EditComponent,
   },
-  { path: '**', component: BlogComponent}
-
-]
+  { path: '**', component: BlogComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -15,14 +15,10 @@ import { BlogComponent } from './blog/blog.component';
     PostComponent,
     FormComponent,
     EditComponent,
-    BlogComponent
+    BlogComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
