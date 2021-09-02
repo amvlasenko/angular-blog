@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Блог</h1>
+    <div class="posts">
+      <div class="posts__wrapper">
+        <app-post 
+        *ngFor="let iterCards of postService.posts"
+        [post]="iterCards"    
+        ></app-post>
+      </div>
+      <button class="posts__add" (click)="showModal()">+ Добавить</button>
+    </div>
+    <section class="modal" id="modalWindow">
+      <input type="text" placeholder="Заголовок поста" [(ngModel)]="inputTitle" class="modal__title">
+      <textarea placeholder="Контент поста" [(ngModel)]="inputContent" class="modal__content"></textarea>
+      <div class="modal__buttons">
+        <button class="modal__cancel" (click)="removeModal()">Отмена</button>
+        <button (click)="addPost()" class="modal__save">Сохранить</button>
+      </div>
+    </section>
+  </div>

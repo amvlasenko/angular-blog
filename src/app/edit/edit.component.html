@@ -1,0 +1,12 @@
+<div class="container">
+    <form class="edit">
+        <button routerLink="/" routerLinkActive="active">Назад</button>
+        <h2>Запись "{{this.title}}"</h2>
+        <input type="text" name="userInputTitle" class="title" [(ngModel)]="inputTitle">
+        <textarea class="content" name="=userInputContent" [(ngModel)]="inputContent"></textarea>
+        <div class="edit__controls">
+            <button class="button__delete" (click)="removePost()">Удалить</button>
+            <button (click)="savePost()">Сохранить</button>
+        </div>
+    </form>    
+</div>

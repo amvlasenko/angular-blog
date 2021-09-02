@@ -1,0 +1,7 @@
+<div class="post" id={{post.id}}>
+    <h2>{{post.title}}</h2>
+    <div class="post__content">
+        <p>{{post.content}}</p>
+    </div>
+    <a [routerLink]="['edit', post.id]" class="post__link">перейти</a>
+</div>

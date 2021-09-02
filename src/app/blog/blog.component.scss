@@ -1,0 +1,60 @@
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+  }
+
+  .posts {
+    position: relative;
+    padding-bottom: 5rem;
+
+    .posts__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 3.5rem;
+      row-gap: 0.5rem;
+    }
+
+    // I hope I understood the task correctly
+    .posts__add {
+      z-index: 2;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+    }
+  }
+
+  .modal {
+    display: none;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid black;
+    background-color: rgb(245, 245, 245);
+
+    .modal__content {
+      width: 100%;
+      height: 100px;
+      resize: none;
+    }
+
+    .modal__buttons {
+      text-align: right;
+    }
+  }
+
+  .modal-show {
+    display: flex;
+  }
+}
