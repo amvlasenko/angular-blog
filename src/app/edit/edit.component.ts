@@ -33,6 +33,13 @@ export class EditComponent implements OnInit {
     this.inputContent = this.postService.posts[this.postIndex].content;
   }
 
+  ngOnDestroy() {
+    // This is to prevent memory leaks and performance regression
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
+
   // This method find post by id from url in posts array
   getPost() {
     this.urlId = this.route.snapshot.params['id'];
