@@ -9,7 +9,7 @@
       </div>
       <button class="posts__add" (click)="showModal()">+ Добавить</button>
     </div>
-    <section class="modal" id="modalWindow">
+    <section class="modal" id="modalWindow" #modal>
       <input type="text" placeholder="Заголовок поста" [(ngModel)]="inputTitle" class="modal__title">
       <textarea placeholder="Контент поста" [(ngModel)]="inputContent" class="modal__content"></textarea>
       <div class="modal__buttons">

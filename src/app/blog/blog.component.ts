@@ -1,17 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Post, PostsService } from '../posts.service';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { PostsService } from '../posts.service';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
 })
-export class BlogComponent implements OnInit {
-  @Input() post!: Post;
+export class BlogComponent {
+  @ViewChild('modal') modal: ElementRef | undefined;
 
   constructor(public postService: PostsService) {}
-
-  ngOnInit(): void {}
 
   inputTitle: string = '';
   inputContent: string = '';
@@ -35,12 +33,10 @@ export class BlogComponent implements OnInit {
   }
 
   showModal() {
-    const modalWindow = document.getElementById('modalWindow');
-    modalWindow?.classList.add('modal-show');
+    this.modal?.nativeElement.classList.add('modal-show');
   }
 
   removeModal() {
-    const modalWindow = document.getElementById('modalWindow');
-    modalWindow?.classList.remove('modal-show');
+    this.modal?.nativeElement.classList.remove('modal-show');
   }
 }
