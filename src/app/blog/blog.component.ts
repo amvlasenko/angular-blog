@@ -1,10 +1,16 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 import { PostsService } from '../posts.service';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogComponent {
   @ViewChild('modal') modal: ElementRef | undefined;
