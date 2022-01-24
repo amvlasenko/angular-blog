@@ -1,4 +1,4 @@
-## Ссылка на деплой: https://amvlasenko.github.io/angular-blog/
+## Ссылка на GitHub Pages: https://amvlasenko.github.io/angular-blog/
 # Angular-blog
 
 **Зачем:**
